@@ -22,9 +22,9 @@ namespace JokesWebApp.Controllers
         // GET: Jokes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Joke.ToListAsync());
+            return View("Index",await _context.Joke.ToListAsync());
         }
-//GET: Jokes/ShowSearchForm
+        //GET: Jokes/ShowSearchForm
         public async Task<IActionResult> ShowSearchForm()
         {
             return View();
